@@ -23,7 +23,7 @@ import little.http.HTTPConnection;
  * @version 2010-06-05
  * @email allthetime10000@gmail.com
  */
-public class WebSiteCoper {
+public class WebSiteCopier {
 	public static Pattern uri_pattern1 = Pattern.compile("(href=|src=){1}[=?\"\'\\w\\.\\-/:]+(\\s|>){1}");//<img src="images/mtimg.gif"/>
 	public static Pattern uri_pattern2 = Pattern.compile("(url\\(){1}[=?\"\'\\w\\.\\-/]+(\\)){1}"); //url(images/index.jpg)
 	String host;
@@ -219,7 +219,7 @@ public class WebSiteCoper {
 	}
 
 	public static void main(String[] argv) throws UnknownHostException,IOException {
-		WebSiteCoper main = new WebSiteCoper();
+		WebSiteCopier main = new WebSiteCopier();
 		main.copyWebSite("www.freeloongson.com", 80, "E:/test3");
 	}
 }
